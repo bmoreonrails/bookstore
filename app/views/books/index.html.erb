@@ -1,0 +1,19 @@
+<h1>Welcome to My Super Rad Bookstore!</h1>
+
+<% if session[:user_id].present? %>
+  <%= button_to 'Log out', session_path, method: :delete %>
+<% else %>
+  <%= link_to 'Login', new_session_path %>
+<% end %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, book_path(book) %>
+      by <%= book.author %></li>
+  <% end %>
+</ul>
+
+<% if session[:user_id].present? %>
+  <%= link_to 'Add a book', new_book_path %>
+<% end %>

@@ -1,0 +1,132 @@
+// Vars
+$greyLight: #f8f8f8;
+$greyMed: #ccc;
+$green: #B8F4C4;
+$red: #FF5959;
+$blue: #478BC2;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  font-family: 'Helvetica Nuee', sans-serif;
+  color: #1b1b1b;
+  line-height: 1.5;
+}
+
+h1{
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+a{
+  color: $blue;
+
+	&:hover{
+		color: darken($blue, 10);
+	}
+}
+
+.container{
+  max-width: 450px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+}
+
+.alert{
+  background: $red;
+  padding: .5rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.notice{
+  background: $green;
+  padding: .5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+li{
+  list-style-position: inside;
+  padding: .5rem 0;
+}
+
+dl, ul{
+	margin-bottom: 1rem;
+}
+
+dl dt{
+  font-weight: bold;
+}
+
+dl dd{
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px #efefef;
+}
+
+form{
+  ul{
+    list-style: none;
+    li{
+      padding-bottom: .5rem;
+      margin-bottom: .5rem;
+    }
+
+  }
+  label{
+   font-size: .875rem;
+   font-weight: bold;
+   margin-bottom: .5rem;
+   display: block;
+  }
+
+  input[type="text"], input[type="password"], textarea, input[type="number"]{
+    width: 100%;
+    height: 2.5rem;
+    background: $greyLight;
+    border: solid 1px $greyMed;
+    border-radius: 2px;
+    padding: 0 1rem;
+  }
+
+  textarea{
+    padding-top: 1rem;
+  }
+}
+
+// input[type="submit"]{}
+.new_book input[type="submit"], .edit_book input[type="submit"], .new_review input[type="submit"], .button{
+  background: $blue;
+  color: white;
+  border: solid 1px $blue;
+  font-size: .875rem;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+	display: inline-block;
+	margin-right: .25rem;
+	margin-bottom: .25rem;
+	text-align: center;
+	line-height: 1rem;
+  padding: .5rem 1rem;
+	text-decoration: none;
+
+  &:hover{
+   background: darken($blue, 10);
+  }
+
+	&.danger{
+		background: $red;
+		&:hover{
+			background: darken($red, 10);
+		}
+	}
+}
+

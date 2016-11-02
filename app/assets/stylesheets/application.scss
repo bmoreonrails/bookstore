@@ -120,10 +120,12 @@ form{
 
   &:hover{
    background: darken($blue, 10);
+   color: white;
   }
 
 	&.danger{
 		background: $red;
+    border-color: $red;
 		&:hover{
 			background: darken($red, 10);
 		}

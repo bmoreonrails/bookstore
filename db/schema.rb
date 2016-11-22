@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161115030350) do
     t.integer  "price_cents"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "quantity"
   end
 
 end

@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="navigation">
+      <div class="left">
+      </div>
+      <div class="center">
+        <%= link_to 'My Bookstore', books_path %>
+      </div>
+      <div class="right">
+        <% if session[:user_id].present? %>
+          <%= button_to 'Log out', session_path, method: :delete, class: "log-out" %>
+        <% else %>
+          <%= link_to 'Login', new_session_path %>
+        <% end %>
+      </div>
+    </div>
     <% if flash[:notice] %>
       <p class="notice"> <%= flash[:notice] %> </p>
     <% end %>

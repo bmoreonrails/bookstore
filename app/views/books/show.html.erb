@@ -8,8 +8,8 @@
   <dt>Author</dt>
   <dd><%= @book.author %></dd>
 
-  <dt>Price Cents</dt>
-  <dd><%= @book.price_cents %></dd>
+  <dt>Price</dt>
+  <dd><%= number_to_currency(@book.price_cents / 100.0) %></dd>
 
   <dt>Quantity</dt>
   <dd><%= @book.quantity %></dd>

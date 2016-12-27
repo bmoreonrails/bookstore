@@ -1,2 +1,18 @@
 <%= form_for(@book) do |f| %>
+  <ul>
+    <li>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </li>
+
+    <li>
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+    </li>
+
+    <li>
+      <%= f.label :price_cents %>
+      <%= f.number_field :price_cents %>
+    </li>
+  </ul>
 <% end %>

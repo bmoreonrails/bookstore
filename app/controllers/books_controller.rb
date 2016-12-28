@@ -14,5 +14,6 @@ class BooksController < ApplicationController
 
   def create
     Book.create(title: params[:book][:title], author: params[:book][:author], price_cents: params[:book][:price_cents], quantity: params[:book][:quantity], description: params[:book][:description])
+    redirect_to books_path
   end
 end

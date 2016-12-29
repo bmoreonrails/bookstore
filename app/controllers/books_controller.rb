@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(title: params[:book][:title], author: params[:book][:author], price_cents: params[:book][:price_cents], quantity: params[:book][:quantity], description: params[:book][:description])
+    Book.create(params.require(:book).permit(:title, :author, :price_cents, :quantity, :description))
     redirect_to books_path
   end
 end

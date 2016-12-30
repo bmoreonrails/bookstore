@@ -78,9 +78,9 @@ h1{
 a{
   color: $blue;
 
-	&:hover{
-		color: darken($blue, 10);
-	}
+  &:hover{
+    color: darken($blue, 10);
+  }
 }
 
 .container{
@@ -112,7 +112,7 @@ li{
 }
 
 dl, ul{
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 dl dt{
@@ -136,10 +136,10 @@ form{
 
   }
   label{
-   font-size: .875rem;
-   font-weight: bold;
-   margin-bottom: .5rem;
-   display: block;
+    font-size: .875rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
   }
 
   input[type="text"], input[type="password"], textarea, input[type="number"]{
@@ -165,39 +165,37 @@ form{
   border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-	display: inline-block;
-	margin-right: .25rem;
-	margin-bottom: .25rem;
-	text-align: center;
-	line-height: 1rem;
+  display: inline-block;
+  margin-right: .25rem;
+  margin-bottom: .25rem;
+  text-align: center;
+  line-height: 1rem;
   padding: .5rem 1rem;
-	text-decoration: none;
+  text-decoration: none;
 
   &:hover{
-   background: darken($blue, 10);
-   color: white;
+    background: darken($blue, 10);
+    color: white;
   }
 
   &.danger{
-		background: $red;
+    background: $red;
     border-color: $red;
-		&:hover{
-			background: darken($red, 10);
-		}
-	}
+    &:hover{
+      background: darken($red, 10);
+    }
+  }
 
   &.grey{
-		background: $greyMed;
+    background: $greyMed;
     border-color: $greyMed;
-		&:hover{
-			background: darken($greyMed, 10);
-		}
-	}
+    &:hover{
+      background: darken($greyMed, 10);
+    }
+  }
 }
 
 
 .button_to{
   display: inline-block;
 }
-
-

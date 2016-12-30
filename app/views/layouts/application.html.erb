@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Bookstore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Bookstore</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <div class="navigation">
       <div class="left">
       </div>
@@ -21,17 +21,17 @@
         <% end %>
       </div>
     </div>
+
     <% if flash[:notice] %>
       <p class="notice"> <%= flash[:notice] %> </p>
     <% end %>
 
     <% if flash[:alert] %>
-    <p class="alert"> <%= flash[:alert] %> </p>
+      <p class="alert"> <%= flash[:alert] %> </p>
     <% end %>
 
-  <div class="container">
-    <%= yield %>
-  </div>
-
-</body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>

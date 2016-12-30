@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navigation">
+      <div class="center">
+        <%= link_to "My Super Rad Bookstore", books_path %>
+      </div>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

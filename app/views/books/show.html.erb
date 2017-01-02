@@ -19,3 +19,5 @@
 </dl>
 
 <%= link_to("Edit book", edit_book_path(@book), class: "button") %>
+
+<%= button_to("Delete Book", book_path(@book), method: :delete, class: "button danger") %>

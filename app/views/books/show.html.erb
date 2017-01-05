@@ -23,3 +23,9 @@
 <%= button_to("Delete Book", book_path(@book), method: :delete, class: "button danger") %>
 
 <p> Number of reviews: <%= @book.reviews.count %> </p>
+
+<ul>
+  <% @book.reviews.each do |review| %>
+    <li> <%= review.body %> </li>
+  <% end %>
+</ul>

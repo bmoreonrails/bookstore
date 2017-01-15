@@ -10,8 +10,15 @@
 
   <body>
     <div class="navigation">
+      <div class="left">
+      </div>
+
       <div class="center">
         <%= link_to "My Super Rad Bookstore", root_path %>
+      </div>
+
+      <div class="right">
+        <%= link_to "Log Out", session_path, method: :delete %>
       </div>
     </div>
 

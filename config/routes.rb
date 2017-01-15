@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  resources :sessions
+  resource :session
 end

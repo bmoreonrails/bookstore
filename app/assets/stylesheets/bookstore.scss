@@ -118,20 +118,6 @@ form{
   .right{
     text-align: right;
   }
-
-  // Log Out link
-  .log-out{
-    border: none;
-    background: none;
-    color: $blue;
-    font-size: 1rem;
-    outline: none;
-    cursor: pointer;
-
-    &:hover{
-      text-decoration: underline;
-    }
-  }
 }
 
 // Container Styles

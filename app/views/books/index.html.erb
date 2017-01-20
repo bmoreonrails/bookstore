@@ -8,4 +8,6 @@
   <% end %>
 </ul>
 
-<%= link_to("Add a book", new_book_path, class: "button") %>
+<% if session[:user_id].present? %>
+  <%= link_to("Add a book", new_book_path, class: "button") %>
+<% end %>

@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :verify_user_session
+  skip_before_action :verify_user_session, only: [:index, :show]
 
   def index
     @books = Book.all

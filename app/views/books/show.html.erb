@@ -26,8 +26,8 @@
   <% end %>
 </ul>
 
-<%= link_to("Edit book", edit_book_path(@book), class: "button") %>
-
-<%= link_to("Add a Review", new_book_review_path(@book), class: "button") %>
-
-<%= button_to("Delete Book", book_path(@book), method: :delete, class: "button danger") %>
+<% if session[:user_id].present? %>
+  <%= link_to("Edit book", edit_book_path(@book), class: "button") %>
+  <%= link_to("Add a Review", new_book_review_path(@book), class: "button") %>
+  <%= button_to("Delete Book", book_path(@book), method: :delete, class: "button danger") %>
+<% end %>

@@ -13,7 +13,8 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:body)
+    permitted_params = params.require(:review).permit(:body)
+    permitted_params.merge(user_id: session[:user_id])
   end
 
   def verify_user_session

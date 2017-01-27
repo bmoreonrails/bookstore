@@ -22,7 +22,11 @@
 
 <ul>
   <% @book.reviews.each do |review| %>
-    <li> <%= review.body %> </li>
+    <% if(review.user.present?) %>
+      <li> <%= review.user.username %> - <%= review.body %> </li>
+    <% else %>
+      <li> Anonymous - <%= review.body %> </li>
+    <% end %>
   <% end %>
 </ul>
 
